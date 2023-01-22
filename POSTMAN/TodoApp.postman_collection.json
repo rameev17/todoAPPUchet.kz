@@ -1,0 +1,189 @@
+{
+	"variables": [],
+	"info": {
+		"name": "TodoApp",
+		"_postman_id": "dd6d8494-a448-175c-b7ba-5627521207ea",
+		"description": "Test application ToDo app Uchet.kz\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET LIST",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "получение списка задач содержащий поля ID, Заголовок, Срок исполнения, Выполнено"
+			},
+			"response": []
+		},
+		{
+			"name": "GET DETAIL",
+			"request": {
+				"url": "127.0.0.1:8000/api/todo/7/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGouZWxkYXJhZG8xMjNAZ21haWwuY29tOnJha2hhdDIwMDA=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST CREATE TASK",
+			"request": {
+				"url": "127.0.0.1:8000/api/todo-create/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGouZWxkYXJhZG8xMjNAZ21haWwuY29tOnJha2hhdDIwMDA=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Test 0424",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "222222",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "2023-02-23",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE TASK",
+			"request": {
+				"url": "127.0.0.1:8000/api/todo-delete/11/",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGouZWxkYXJhZG8xMjNAZ21haWwuY29tOnJha2hhdDIwMDA=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE TASK",
+			"request": {
+				"url": "127.0.0.1:8000/api/todo-update/7/",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGouZWxkYXJhZG8xMjNAZ21haWwuY29tOnJha2hhdDIwMDA=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "due_date",
+							"value": "2025-01-15",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "TASK EXECUTE",
+			"request": {
+				"url": "127.0.0.1:8000/api/change-password/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGouZWxkYXJhZG8xMjNAZ21haWwuY29tOnJha2hhdDIwMDA=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CHANGE PASSWORD",
+			"request": {
+				"url": "127.0.0.1:8000/api/change-password/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGouZWxkYXJhZG8xMjNAZ21haWwuY29tOnJha2hhdDIwMDA=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"url": "127.0.0.1:8000/api/login/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGouZWxkYXJhZG8xMjNAZ21haWwuY29tOnJha2hhdDIwMDA=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "rameev17@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "rameev17",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
